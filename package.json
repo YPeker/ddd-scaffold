@@ -1,0 +1,22 @@
+{
+  "name": "ddd-scaffold",
+  "version": "1.0.0",
+  "description": "a domain driven design oriented typescript scaffold",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/YPeker/ddd-scaffold.git"
+  },
+  "author": "Yusuf Peker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YPeker/ddd-scaffold/issues"
+  },
+  "homepage": "https://github.com/YPeker/ddd-scaffold#readme"
+}
