@@ -1,0 +1,14 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "outDir": "./dist"
+    },
+    "exclude": ["node_modules", "**/*.spec.ts"],
+  }

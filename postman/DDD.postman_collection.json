@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "6f4a5be1-f833-4de8-b59c-a7ba31e7c6ab",
+		"name": "DDD-Scaffold",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Encode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"www.google.de\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10000/encode",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"encode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10000/decode/78efAbq",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"decode",
+						"78efAbq"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
