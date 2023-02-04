@@ -13,7 +13,7 @@ describe('Encode', () => {
     it('should return a short url json with a valid url', async () => {
         const url = 'http://www.google.de/'
         const response = await httpClient.post('encode', {
-            url,
+            url
         })
         const data = response.data
         expect(data.short_url).to.exist
@@ -25,9 +25,8 @@ describe('Encode', () => {
     it('should return a 400 status with a malformed url', async () => {
         const url = 'google'
         const response = await httpClient.post('encode', {
-            url,
+            url
         })
-        console.log({response: response.data})
         expect(response.status).to.be.equal(400)    
     })
 
