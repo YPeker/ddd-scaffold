@@ -5,7 +5,7 @@ import { UrlShortenerService } from '../../src/application/UrlShortenerService'
 import { MemoryBasedShortUrlRepository } from '../../src/infrastructure/MemoryBasedShortUrlRepository'
 import chaiAsPromised from 'chai-as-promised'
 import { nanoid } from 'nanoid'
-chai.use(chaiAsPromised);
+chai.use(chaiAsPromised)
 
 describe('UrlShortenerService', () => {
     it('should shorten given a valid url', async () => {

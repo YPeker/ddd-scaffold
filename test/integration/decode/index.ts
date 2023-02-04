@@ -13,7 +13,7 @@ describe('Decode', () => {
     it('should return a short url json with a valid url', async () => {
         const url = 'http://www.google.de/'
         const encodeResponse = await httpClient.post('encode', {
-            url,
+            url
         })
         const encodedData = encodeResponse.data
 

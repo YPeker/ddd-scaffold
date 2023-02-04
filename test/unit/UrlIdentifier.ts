@@ -3,7 +3,7 @@ import {describe, it} from 'mocha'
 import  chai, {expect}  from 'chai'
 import { UrlIdentifier } from '../../src/domain/UrlIdentifier'
 import chaiAsPromised from 'chai-as-promised'
-chai.use(chaiAsPromised);
+chai.use(chaiAsPromised)
 
 describe('UrlIdentifier', () => {
     it('generates a new UrlIdentifier with the length 7', () => {

@@ -1,10 +1,10 @@
-import { Request, Response } from "express";
-import { config } from "../../../configs";
-import { UrlShortenerService } from "../../application/UrlShortenerService";
-import { ShortUrl } from "../../domain/ShortUrl";
-import { UrlIdentifierAlreadyExistsError } from "../../infrastructure/UrlIdentifierAlreadyExistsError";
-import { tryUntilSucceed } from "../../utils/tryUntilSucceed";
-import { ExpressRouteFunc } from "../ExpressRouteFunc";
+import { Request, Response } from "express"
+import { config } from "../../../configs"
+import { UrlShortenerService } from "../../application/UrlShortenerService"
+import { ShortUrl } from "../../domain/ShortUrl"
+import { UrlIdentifierAlreadyExistsError } from "../../infrastructure/UrlIdentifierAlreadyExistsError"
+import { tryUntilSucceed } from "../../utils/tryUntilSucceed"
+import { ExpressRouteFunc } from "../ExpressRouteFunc"
 
 
 // shortens the url and responds with the short_url, the short_url_identifier and original_url
@@ -36,7 +36,7 @@ export function encode(urlShortenerService: UrlShortenerService): ExpressRouteFu
             res.json({
                 short_url: `${config.base_url}/decode/${shortUrl.urlIdentifier.urlIdentifier}`,
                 short_url_identifier: shortUrl.urlIdentifier.urlIdentifier,
-                original_url: shortUrl.originalUrl.toString(),
+                original_url: shortUrl.originalUrl.toString()
 
             })
         } catch (error) {

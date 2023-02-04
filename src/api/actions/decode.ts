@@ -1,7 +1,7 @@
-import { Request, Response } from "express";
-import { config } from "../../../configs";
-import { UrlShortenerService } from "../../application/UrlShortenerService";
-import { ExpressRouteFunc } from "../ExpressRouteFunc";
+import { Request, Response } from "express"
+import { config } from "../../../configs"
+import { UrlShortenerService } from "../../application/UrlShortenerService"
+import { ExpressRouteFunc } from "../ExpressRouteFunc"
 
 
 // gets the original url via short url identifier
@@ -19,7 +19,7 @@ export function decode(urlShortenerService: UrlShortenerService): ExpressRouteFu
             res.json({
                 short_url: `${config.base_url}/decode/${shortUrl.urlIdentifier.urlIdentifier}`,
                 short_url_identifier: shortUrl.urlIdentifier.urlIdentifier,
-                original_url: shortUrl.originalUrl.toString(),
+                original_url: shortUrl.originalUrl.toString()
 
             })
         } catch (error) {

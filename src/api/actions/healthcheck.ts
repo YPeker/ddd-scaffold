@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { ExpressRouteFunc } from "../ExpressRouteFunc";
+import { Request, Response } from "express"
+import { ExpressRouteFunc } from "../ExpressRouteFunc"
 
 
 export function healthCheck(): ExpressRouteFunc {
