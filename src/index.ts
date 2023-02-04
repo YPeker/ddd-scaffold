@@ -1,16 +1,18 @@
-import { server } from './api/server'
+import "reflect-metadata"
+import { Server } from './api/server'
+import { registerContainer } from './container'
 
 async function init() {
   try {
+    const container = registerContainer()
     console.log("Starting Service....")
-    server.listen(10000, () => {
-      console.log('Express App Listening on Port 10000');
-    });
+    const server = container.resolve(Server) 
+    server.start()
     console.log("Started Service....")
   } catch (error) {
-    console.error(`An error occurred: ${JSON.stringify(error)}`);
-    process.exit(1);
+    console.error(`An error occurred: ${JSON.stringify(error)}`)
+    process.exit(1)
   }
 }
 
-init();
+init()

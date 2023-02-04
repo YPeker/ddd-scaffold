@@ -1,10 +1,12 @@
-import { ShortUrl } from "../domain/ShortUrl";
-import { ShortUrlRepository } from "../domain/ShortUrlRepository";
-import { UrlIdentifier } from "../domain/UrlIdentifier";
+import { ShortUrl } from "../domain/ShortUrl"
+import { ShortUrlRepository } from "../domain/ShortUrlRepository"
+import { UrlIdentifier } from "../domain/UrlIdentifier"
+import {injectable, inject} from "tsyringe"
 
+@injectable()
 export class UrlShortenerService {
 
-    constructor(private _repository: ShortUrlRepository) {
+    constructor(@inject("ShortUrlRepository") private _repository: ShortUrlRepository) {
     }
 
     public async shorten(url: string): Promise<ShortUrl> {
